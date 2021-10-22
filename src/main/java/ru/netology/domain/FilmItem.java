@@ -7,7 +7,7 @@ class FilmItem {
     private String typeFilm;
     private boolean tomorrow;
 
-    public FilmItem() {
+    public FilmItem(int i, int i1, String s, String detective) {
     }
 
     public FilmItem(int id, String filmName) {
@@ -15,7 +15,7 @@ class FilmItem {
         this.filmID = filmID;
         this.filmName = filmName;
         this.typeFilm = typeFilm;
-        this.tomorrow = tomorrow;
+       // this.tomorrow = tomorrow;
     }
 
     public int getId() {
