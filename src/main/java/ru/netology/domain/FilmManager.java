@@ -3,7 +3,8 @@ package ru.netology.domain;
 import ru.netology.domain.FilmItem;
 
 public class FilmManager {
-     private FilmItem[] items = new FilmItem[0];
+    private FilmItem[] items = new FilmItem[0];
+
     public void save(FilmItem item) {
         int length = items.length + 1;
         FilmItem[] tmp = new FilmItem[length];
@@ -12,6 +13,7 @@ public class FilmManager {
         tmp[lastFilm] = item;
         items = tmp;
     }
+
     public FilmManager() {
     }
 
@@ -22,14 +24,14 @@ public class FilmManager {
 
     public FilmItem[] filmsGet() {
         int resultLength;
-        FilmItem[]  items = getItems();
+        FilmItem[] items = getItems();
         if (items.length > 10) {
             resultLength = 10;
         } else {
             resultLength = items.length;
         }
         FilmItem[] result = new FilmItem[resultLength];
-        for (int i = 0; i < resultLength; i++){
+        for (int i = 0; i < resultLength; i++) {
             int index = items.length - i - 1;
             result[i] = items[index];
         }

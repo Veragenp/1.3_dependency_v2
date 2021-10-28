@@ -15,7 +15,7 @@ class FilmItem {
         this.filmID = filmID;
         this.filmName = filmName;
         this.typeFilm = typeFilm;
-       // this.tomorrow = tomorrow;
+        // this.tomorrow = tomorrow;
     }
 
     public int getId() {

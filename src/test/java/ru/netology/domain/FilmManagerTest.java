@@ -44,10 +44,11 @@ class FilmManagerTest {
         manager.save(eleventh);
 
 
-        FilmItem[] expected = {eleventh,tenth,ninth,eighth,seventh,sixth,fifth,fourth,third,second};
+        FilmItem[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
         FilmItem[] actual = manager.filmsGet();
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldGetLastFilmsLowLimit() {
         manager.save(first);
@@ -57,10 +58,11 @@ class FilmManagerTest {
         manager.save(fifth);
         manager.save(sixth);
         manager.save(seventh);
-        FilmItem[] expected = {seventh,sixth,fifth,fourth,third,second,first};
+        FilmItem[] expected = {seventh, sixth, fifth, fourth, third, second, first};
         FilmItem[] actual = manager.filmsGet();
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldGetLastOneFilms() {
         manager.save(first);
@@ -68,6 +70,7 @@ class FilmManagerTest {
         FilmItem[] actual = manager.filmsGet();
         assertArrayEquals(expected, actual);
     }
+
     @Test
     public void shouldGetNoFilms() {
         FilmItem[] expected = {};
