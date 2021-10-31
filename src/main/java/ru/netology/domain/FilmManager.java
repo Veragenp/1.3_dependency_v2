@@ -4,6 +4,15 @@ import ru.netology.domain.FilmItem;
 
 public class FilmManager {
     private FilmItem[] items = new FilmItem[0];
+    private int amountOffFilm = 10;
+
+    public FilmManager(int amountOffFilm) {
+        this.amountOffFilm = amountOffFilm;
+    }
+
+    public int getAmountOffFilm() {
+        return amountOffFilm;
+    }
 
     public void save(FilmItem item) {
         int length = items.length + 1;
@@ -25,8 +34,8 @@ public class FilmManager {
     public FilmItem[] filmsGet() {
         int resultLength;
         FilmItem[] items = getItems();
-        if (items.length > 10) {
-            resultLength = 10;
+        if (items.length > amountOffFilm) {
+            resultLength = amountOffFilm;
         } else {
             resultLength = items.length;
         }
